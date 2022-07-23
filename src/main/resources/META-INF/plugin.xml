@@ -1,0 +1,32 @@
+<idea-plugin>
+    <id>org.byted.videoarch.pcdn.ztest</id>
+    <name>Z-Test Generator</name>
+    <vendor email="mengxiangzhuo.0@bytedance.com" url="https://www.bytedance.com">ByteDance</vendor>
+
+    <description><![CDATA[
+    Z-Test Generator is a tool for automatically generating z-tests for Golang. <br><br>
+    For more details, please refer to <br>
+    <a href="https://bytedance.feishu.cn/docs/doccn9OgCu7z2pk6QvFdViFa9Cf">
+        https://bytedance.feishu.cn/docs/doccn9OgCu7z2pk6QvFdViFa9Cf.
+    </a><br><br>
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <notificationGroup id="ng" displayType="BALLOON"/>
+        <applicationService serviceImplementation="org.byted.videoarch.pcdn.ztest.AppSettingsState"/>
+        <applicationConfigurable parentId="tools" instance="org.byted.videoarch.pcdn.ztest.AppSettingsConfigurable"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="code" class="org.byted.videoarch.pcdn.ztest.Coder" text="Generate Z-Test">
+            <add-to-group group-id="EditorLangPopupMenu" anchor="after" relative-to-action="Generate"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta Z"/>
+        </action>
+    </actions>
+</idea-plugin>
