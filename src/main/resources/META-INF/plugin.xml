@@ -24,6 +24,10 @@
 
     <actions>
         <!-- Add your actions here -->
+        <action id="code-unpack" class="org.byted.videoarch.pcdn.ztest.UnpackCoder" text="Generate Z-Test (Unpack)">
+            <add-to-group group-id="EditorLangPopupMenu" anchor="after" relative-to-action="Generate"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta X"/>
+        </action>
         <action id="code" class="org.byted.videoarch.pcdn.ztest.Coder" text="Generate Z-Test">
             <add-to-group group-id="EditorLangPopupMenu" anchor="after" relative-to-action="Generate"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta Z"/>

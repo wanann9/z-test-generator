@@ -1,18 +1,18 @@
 plugins {
-    id 'org.jetbrains.intellij' version '1.7.0'
+    id 'org.jetbrains.intellij' version '1.8.0'
     id 'java'
 }
 
 group 'org.byted.videoarch.pcdn'
-version '1.0.3'
+version '1.0.4'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
@@ -21,6 +21,7 @@ intellij {
 }
 patchPluginXml {
     changeNotes = """
+    1.0.4 - 添加对解包场景的适配\n
     1.0.3 - 适配IDEA 2022.2版本
     """
 }
