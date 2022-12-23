@@ -1,10 +1,10 @@
 plugins {
-    id 'org.jetbrains.intellij' version '1.8.0'
+    id 'org.jetbrains.intellij' version '1.10.0'
     id 'java'
 }
 
 group 'org.byted.videoarch.pcdn'
-version '1.0.4'
+version '1.0.5'
 
 repositories {
     mavenCentral()
@@ -17,12 +17,11 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = '2022.2'
+    version = '2022.3'
 }
 patchPluginXml {
     changeNotes = """
-    1.0.4 - 添加对解包场景的适配\n
-    1.0.3 - 适配IDEA 2022.2版本
+    1.0.5 - 适配IDEA 2022.3版本
     """
 }
 test {
